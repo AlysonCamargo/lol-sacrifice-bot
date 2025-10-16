@@ -1,71 +1,80 @@
-# 🎯 lol-sacrifice-bot
+🎯 Sacrifice Bot
 
-Um bot do Discord que escolhe aleatoriamente um membro com um cargo específico para ser "sacrificado" — ou seja, escolhido para jogar League of Legends naquele dia. Ideal para servidores onde ninguém quer jogar, mas alguém tem que ir pra guerra. 😔
+Um bot do Discord que escolhe aleatoriamente um membro com um cargo específico para ser o “sacrificado do dia” — ideal para servidores em que ninguém quer ser o escolhido para a missão, mas alguém precisa ir. 😔
 
-## ⚙️ Funcionalidades
+Automatize o destino. Aceite o sacrifício.
 
-- Comando `!sacrificar` para escolher um membro aleatório com o cargo de "Jogador de LoL".
-- Agendamento automático diário às 20h (horário do servidor) usando `node-cron`.
-- Respostas amigáveis e avisos quando nenhum membro tem o cargo.
+⚙️ Funcionalidades
 
-## 🧠 Tecnologias usadas
+Comando !sacrificar para escolher aleatoriamente um membro com um cargo configurado.
 
-- [discord.js](https://discord.js.org/)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [node-cron](https://www.npmjs.com/package/node-cron)
+Agendamento automático diário às 20h (horário do servidor) com node-cron.
 
-## 🚀 Instalação
+Mensagens personalizadas e avisos quando nenhum membro atende aos critérios.
 
-1. Clone o repositório:
+🧠 Tecnologias utilizadas
 
-```bash
+discord.js
+
+dotenv
+
+node-cron
+
+🚀 Instalação
+
+Clone o repositório:
+
 git clone https://github.com/AlysonCamargo/lol-sacrifice-bot.git
 cd lol-sacrifice-bot
-```
 
-2. Instale as dependências:
 
-```bash
+Instale as dependências:
+
 npm install
-```
 
-3. Crie um arquivo `.env` com as seguintes variáveis:
 
-```env
+Crie um arquivo .env com as variáveis:
+
 DISCORD_TOKEN=seu_token_do_bot
 GUILD_ID=id_do_servidor
 CHANNEL_ID=id_do_canal
 ROLE_ID=id_do_cargo
-```
 
-4. Inicie o bot:
 
-```bash
+Inicie o bot:
+
 node index.js
-```
 
-## 🕒 Agendamento automático
+🕒 Agendamento automático
 
-O bot roda automaticamente todos os dias às 20h (horário do servidor) e escolhe um membro com o cargo configurado para jogar LoL. Se ninguém tiver o cargo, ele avisa no canal.
+O bot executa automaticamente todos os dias às 20h e realiza o sorteio entre os membros com o cargo definido.
+Se nenhum membro for encontrado, ele notifica o canal configurado.
 
-## 🛡️ Requisitos
+🛡️ Requisitos
 
-- Node.js **v18** ou superior
-- Permissões do bot:
-  - Ler e enviar mensagens
-  - Acessar membros da guilda
-  - Ler cargos e canais
+Node.js v18+
 
-## ✍️ Comando manual
+Permissões necessárias:
 
-Qualquer usuário pode digitar `!sacrificar` em um canal que o bot possa ler. Ele fará o sorteio imediatamente.
+Ler e enviar mensagens
 
-## 💡 Exemplo de mensagem
+Acessar membros da guilda
 
-```
-🎯 @Usuário foi escolhido hoje para jogar League of Legends. Que tristeza. 🙋‍♂️
-```
+Ler cargos e canais
 
-## 📄 Licença
+✍️ Comando manual
 
-MIT. Faça o que quiser, mas jogue LoL por sua conta e risco.
+Qualquer usuário pode digitar:
+
+!sacrificar
+
+
+O bot fará o sorteio imediatamente, escolhendo quem será o destinado do dia.
+
+💡 Exemplo de mensagem
+🎯 @Usuário foi escolhido hoje. Que a sorte esteja com ele. 🙋‍♂️
+
+📄 Licença
+
+Distribuído sob a licença MIT.
+Use, modifique e ria — mas lembre-se: o sacrifício é inevitável. 🕯️
